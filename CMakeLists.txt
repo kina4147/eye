@@ -35,8 +35,19 @@ catkin_package(
 include_directories(
 	include
 	see/include
+	glass/include
  	${catkin_INCLUDE_DIRS}
 	${OpenCV_INCLUDE_DIRS}
+)
+
+# glass
+add_executable(glass 
+	glass/src/glass_node.cpp
+	glass/src/calibration.cpp glass/include/calibration.hpp	
+)
+target_link_libraries(glass
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES} 
 )
 
 # see

@@ -9,7 +9,7 @@
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "datmo_omni_tracker");
+    ros::init(argc, argv, "see");
     ros::NodeHandle nh;
 
     eye::see::camera cam(0, nh);

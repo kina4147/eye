@@ -11,7 +11,7 @@
 
 void eye::see::camera::init()
 {
-	image_pub = image_transport.advertise("camera/image", 1);
+	image_pub = image_transport.advertise("/eye/see/image", 1);
 	loadCamera();
 }
 void eye::see::camera::reset()
